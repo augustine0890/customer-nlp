@@ -14,3 +14,8 @@
   - `pip freeze > requrements.txt`
 - Install packages from `requirements.txt`
   - `pip install -r requirements.txt`
+
+## Setting a Docker
+- Build container imaage and tag it `app_started`
+  - `docker build -t app_started .`
+- Run the container: `docker run app_started`
