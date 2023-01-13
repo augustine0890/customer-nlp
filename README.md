@@ -16,6 +16,13 @@
   - `pip install -r requirements.txt`
 
 ## Setting a Docker
-- Build container imaage and tag it `app_started`
-  - `docker build -t app_started .`
-- Run the container: `docker run app_started`
+- Build container imaage and tag it `fastapi-nlp`
+  - `docker build -t fastapi-nlp .`
+- Run the container: `docker run -d --name fastapi-container -p 80:80 fastapi-nlp`
+
+## FastAPI Application
+- Start application using `uvicorn`
+  - `uvicorn app:app --port 8000 --reload`
+    - `file:instance`: the file containing the instance of FastAPI and the name variable holding the FastAPI instance.
+    - `--port`: PORT the application will be served on.
+    - `--reload`: an optional argument included to restart the application on every file change.
