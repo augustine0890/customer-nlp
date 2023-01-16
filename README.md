@@ -18,7 +18,7 @@
 ## Setting a Docker
 - Build container imaage and tag it `fastapi-nlp`
   - `docker build -t fastapi-nlp .`
-- Run the container: `docker run -d --name fastapi-container -p 8000:8000 fastapi-nlp`
+- Run the container: `docker run -d --name customer-nlp-application -p 8000:8000 fastapi-nlp`
 
 ## FastAPI Application
 - Start application using `uvicorn`
