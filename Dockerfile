@@ -13,5 +13,5 @@ ADD . /usr/src/app/
 EXPOSE 80
 
 # Run a command
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 # CMD ["python", "app.py"]
