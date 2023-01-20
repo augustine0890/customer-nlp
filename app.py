@@ -3,6 +3,9 @@ from transformers import pipeline
 
 app = FastAPI()
 
+MODEL = "distilbert-base-uncased-finetuned-sst-2-english"
+TWITTER_MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+
 
 @app.get("/")
 async def welcome() -> dict:
@@ -12,7 +15,7 @@ async def welcome() -> dict:
 @app.post("/sentiment")
 async def sentiment(request: Request) -> dict:
     classifier = pipeline(
-        "sentiment-analysis", model='distilbert-base-uncased-finetuned-sst-2-english')
+        "sentiment-analysis", model=TWITTER_MODEL)
     body = await request.json()
     text = body['text']
     results = classifier(text)
