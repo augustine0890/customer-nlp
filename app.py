@@ -3,7 +3,7 @@ from transformers import pipeline
 
 app = FastAPI()
 
-SENTIMENT_MODEL = "distilbert-base-uncased-finetuned-sst-2-english"
+BASE_SENTIMENT_MODEL = "distilbert-base-uncased-finetuned-sst-2-english"
 TWITTER_MODEL = "cardiffnlp/twitter-roberta-base-sentiment-latest"
 EMOTION_MODEL = "j-hartmann/emotion-english-distilroberta-base"
 
